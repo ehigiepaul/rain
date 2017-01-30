@@ -1,0 +1,23 @@
+{
+  "name": "rain",
+  "version": "1.0.0",
+  "main": "core.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajax-request": "^1.2.1",
+    "fetchagent": "^1.0.0",
+    "mongodb": "^2.2.19",
+    "node-uncompress": "^0.1.8",
+    "omdb": "^0.7.0",
+    "p7zip": "^2.2.0",
+    "q-xhr": "^1.1.0",
+    "resolvmon": "^0.2.4",
+    "shelljs": "^0.7.5"
+  },
+  "devDependencies": {},
+  "description": ""
+}

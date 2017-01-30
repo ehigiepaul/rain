@@ -1,0 +1,13 @@
+var projectJoy = require('./db');
+var imdb = require('./imdb');
+
+var data = imdb('smallville', 'series', "", "", (res) => {
+    console.log(res)
+})
+projectJoy.connect.then((db) => {
+    db.collection('series').insert(
+        data
+    );
+    console.log('document inserted')
+
+})
