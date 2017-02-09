@@ -1,0 +1,5 @@
+Webchimera.js -  vlc js player for all format
+mean stack -  platform main infastrutor
+transcoder - to transcode the videos to mkv for light and fast high video quality.
+cast to tv, appletv, chrome cast.
+imdb api intergration

@@ -1,0 +1,385 @@
+@cc1: #d96281;
+@cc2: #4f6b75;
+@cc3: #d99441;
+@cc4: #e7ddda;
+@cc5: #000000;
+@cc6: rgba(84, 24, 24, 0.6);
+
+
+*
+{
+    transition: all 0.3s ease;
+}
+
+@font-face{
+    font-family: Organo;
+    src: url("../fonts/Organocoloredversionat-logomagazin-comorgano-font.ttf")
+}
+
+/* Put your custom styles here */
+
+body,
+ html
+{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+    clear: both;
+    vertical-align: baseline;
+}
+
+.full_wrap
+{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #0c1318;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.full_center
+{
+    border-radius: 25px;
+    box-shadow: 5px 10px 10px black;
+    overflow: hidden;
+    background-color: rgba(235, 235, 235, 0.89);
+    position: relative;
+    display: none;
+    width: 400px;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+.full_center h3
+{
+    font-family: Organo;
+}
+
+.wrapper
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: scroll;
+    top: 0;
+    bottom: 0;
+    display: table-cell;
+}
+
+.login
+{
+    height: auto;
+}
+
+.reg
+{
+    display: none;
+}
+
+.forget
+{
+    display: none;
+}
+
+.full_center .back
+{
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    display: none;
+}
+
+.startup .footer
+{
+    position: fixed;
+    bottom: 0;
+}
+
+.loading
+{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(32, 32, 32, 0.79);
+    height: 100%;
+    z-index: 9999;
+    width: 100%;
+}
+
+/*.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }*/
+
+.loading img
+{
+    margin-top: 25%;
+}
+
+.bgImg
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+
+.bg
+{
+    background-color: rgba(30, 44, 54, 0.92);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.border
+{
+    border-bottom: 1px solid white;
+}
+
+.MainHeader
+{
+    background-color: @cc5;
+    right: 0;
+    z-index: 0;
+    position: static;
+    border-bottom: 2px solid #0ee91f;
+}
+
+.userInfo li
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.searchBox
+{
+    background-color: @cc2;
+    overflow: hidden;
+    z-index: 40;
+    width: 0px;
+    float: right;
+}
+
+.searchBox input
+{
+    border-radius: 0px;
+    border: 0px;
+    background-color: rgba(179, 179, 179, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.searchBox input::-webkit-input-placeholder
+{
+    color: white;
+}
+
+#searchBox:checked + .searchBox
+{
+    width: 440px;
+}
+
+.navMevu
+{
+    width: 150px;
+    position: relative;
+    height: 100%;
+    background-color: @cc5;
+    float: left;
+    overflow: scroll;
+    top: 100px;
+    padding-bottom: 50px;
+}
+
+.mainContent
+{
+    margin-left: 150px;
+    height: 100%;
+    position: relative;
+    background-color: @cc5;
+    border-left: 2px solid white;
+    overflow: hidden;
+}
+
+.navMevu li
+{
+    color: #d5d5d5;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+
+.navMevu ul
+{
+    padding-left: 0;
+}
+
+.userSide
+{
+    position: absolute;
+    top: 56px;
+    width: 220px;
+    overflow: hidden;
+    right: -220px;
+    z-index: 42;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding-bottom: 15px;
+}
+
+#userSide:checked + .userSide
+{
+    right: 3px;
+}
+
+.userSide li
+{
+    padding: 5px 10px;
+    color: white;
+}
+
+.logo
+{
+    position: fixed;
+    width: 150px;
+    z-index: 40;
+}
+
+.navOpt
+{
+    overflow: auto;
+    position: relative;
+    height: 100%;
+}
+
+.contentZone
+{
+    height: 100%;
+    width: 100%;
+    padding-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.static
+{
+    position: static;
+    overflow: hidden;
+    display: block;
+}
+
+.flexGrid
+{
+    display: flex;
+    flex-flow: row wrap ;
+    overflow: scroll;
+    position: relative;
+    top: 40px;
+}
+
+.discoveryFlex
+{
+    width: 140px;
+    max-width: 160px;
+    padding: 5px;
+    overflow: hidden;
+    height: 230px;
+    flex: 1 1 auto;
+    position: relative;
+    text-align: center;
+}
+
+.discoveryFlex img
+{
+    height: 100%;
+}
+
+.discoveryFill
+{
+    position: absolute;
+    background-color: rgba(24, 22, 22, 0.58);
+    z-index: 24;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    flex-flow: row wrap;
+    display: flex;
+    opacity: 0;
+}
+
+.discoveryFollow
+{
+    margin: auto;
+    flex-grow: 1;
+}
+
+.discoveryFill:hover
+{
+    opacity: 1;
+}
+
+.discoveryTab
+{
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    left: 153px;
+    z-index: 139;
+    background-color: rgba(161, 34, 34, 0.89);
+    overflow: scroll;
+}
+
+.flexRow
+{
+    display: flex;
+    flex-flow: row  ;
+    overflow: scroll;
+    position: relative;
+}
+
+.discovery
+{
+    overflow: scroll;
+    height: 100%;
+    display: block;
+}
+
+#discovery:checked + .discovery
+{
+    display: block;
+}
+
+.rowScroll
+{
+    overflow: scroll;
+    display: block;
+}
+

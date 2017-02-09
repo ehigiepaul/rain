@@ -1,0 +1,669 @@
+<!DOCTYPE html> 
+<html lang="en" style="height:100%;">
+    <head> 
+        <meta charset="utf-8"> 
+        <title>JOY </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="keywords" content />
+        <meta name="description" content />
+        <link rel="shortcut icon" href="ico/favicon.png"> 
+        <!-- Core CSS -->         
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <!-- Style Library -->         
+        <link href="css/style-library-1.css" rel="stylesheet">
+        <link href="css/plugins.css" rel="stylesheet">
+        <link href="css/blocks.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->         
+        <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->         
+    </head>     
+    <body data-spy="scroll" data-target="nav">
+        <div class="loading" data-pg-name="loading">
+            <img src="img/joy_logoAsset%201.png" width="80" class="fa fa-pulse fa-rotate-90" />
+        </div>
+        <div class="text-center logo bg-black" data-pg-name="logo"> 
+            <img src="img/joy_logoAsset 1.png" width="100" class="margin-top10 margin-bottom10" />
+        </div>
+        <div class="navMevu" data-pgc-save-partial="sideNav">
+            <div class="navOpt">
+                <hr class="margin-top0" />
+                <ul>
+                    <li>
+                        <i class="fa fa-compass fa-lg fa-fw"></i>Discover
+                    </li>
+                    <a href="">
+                        <li>
+                            <i class="fa fa-lg fa-fw fa-book"></i>Libriary
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <i class="fa fa-lg fa-fw fa-calendar"></i>Calender
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <i class="fa fa-lg fa-fw fa-history"></i>History
+                        </li>
+                    </a>
+                </ul>
+                <hr />
+                <ul class="pad-bottom30">
+                    <a href="">
+                        <li>List item</li>
+                    </a>
+                    <a href="">
+                        <li>List item</li>
+                    </a>
+                    <a href="">
+                        <li>List item</li>
+                    </a>
+                    <a href="">
+                        <li>List item</li>
+                    </a>
+                    <a href="">
+                        <li>List item</li>
+                    </a>
+                    <a href="">
+                        <li>List item</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="mainContent pad5 min-height-700px">
+            <div class="text-right MainHeader col-xs-12">
+                <ul class="userInfo fa-ul list-inline margin-bottom0 margin-top0 pad-bottom0 pad0 pull-right">
+                    <li>
+                        <label for="searchBox">
+                            <i class="fa fa-search fa-lg fa-fw white"></i>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="userSide">
+                            <p class="white margin-top0 margin-bottom0" data-toggle="tooltip" data-target="more about user">UsersName</p>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="userSide">
+                            <img src="file:///Applications/Pinegrow%20Web%20Designer.app/Contents/Resources/app.nw/placeholders/img7.jpg" class="img-circle" width="30">
+                        </label>
+                    </li>
+                </ul>
+                <div>
+                    <input class="hidden" type="checkbox" value="" id="userSide">
+                    <div class="userSide">
+                        <div class="text-center margin-top5">
+                            <img src="file:///Applications/Pinegrow%20Web%20Designer.app/Contents/Resources/app.nw/placeholders/img7.jpg" width="80" class="img-rounded">
+                        </div>
+                        <ul style="padding:0px;" class="margin-top5 margin-bottom10">
+                            <li class="text-center">Username</li>
+                            <li>Profile</li>
+                            <li>Subscription</li>
+                            <li>Setting</li>
+                            <li>Help</li>
+                            <li>Logout</li>
+                        </ul>
+                    </div>
+                </div>
+                <div data-pg-name="search">
+                    <input class="hidden" type="checkbox" value="" id="searchBox">
+                    <div class="searchBox" data-pg-name="search zone">
+                        <div class="col-xs-12">
+                            <form role="form"> 
+                                <div class="form-group margin-bottom0">
+                                    <input type="search" class="form-control" placeholder="Search movies, series or shows"> 
+                                </div>                                 
+                            </form>                             
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn margin-bottom0 btn-sm bg-sunflower pull-left margin-top5 black">Make request</button>                 
+            </div>
+            <div class="contentZone container">
+                <div data-pg-name="discovery" class="pull-left clearfix discovery">
+                    <div class="discoveryTab">
+                        <ul class="list-inline">
+                            <li>
+                                <button type="button" class="btn btn-default margin-top0 btn-sm bg-transparent no-shadow margin-bottom0 white">Series</button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-default margin-top0 btn-sm bg-transparent no-shadow margin-bottom0 white">Movies</button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-default margin-top0 btn-sm bg-transparent no-shadow margin-bottom0 white">Classes</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flexGrid">
+                        <div class="discoveryFlex">
+                            <img src="img/posters/3768c84033f1b05c4c17bfc8c74d4b2e.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/93768a0b766a5c8f2309e6c2811ef6b7.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/Arrow_TV_Series_Promo_Poster-3.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/images.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMjA3MjcwOTE0MF5BMl5BanBnXkFtZTgwNDI3MTc1MDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMjQxNDY3Njk4M15BMl5BanBnXkFtZTgwODEzOTg3MDI@._V1__SX1872_SY944_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMTA1MTA4MjU5MjReQTJeQWpwZ15BbWU4MDg3Mjc0NjAy._V1_SY1000_CR0,0,735,1000_AL_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/suitsposter.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/Shadowhunters-2.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BOTY5MjQyNjU1NF5BMl5BanBnXkFtZTgwNzcyNzQ2MDI@._V1_SY1000_CR0,0,746,1000_AL_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BOTEzMjc3MDI3M15BMl5BanBnXkFtZTgwMDU0MDA4MDI@._V1__SX1872_SY944_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BODc1NTY5ODM3N15BMl5BanBnXkFtZTgwNzM4OTg3MDI@._V1__SX1872_SY944_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BODAwMzE0NzIxNV5BMl5BanBnXkFtZTgwMTkzNzk2MDI@._V1_SY1000_CR0,0,684,1000_AL_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BNzI1NjI5OTUyM15BMl5BanBnXkFtZTgwOTM4NzY2MDI@._V1_SY1000_CR0,0,657,1000_AL_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BNzA1NDU5MzIxOV5BMl5BanBnXkFtZTgwMjY4NTM3MDI@._V1__SX1872_SY944_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMzYzNDEyODIzN15BMl5BanBnXkFtZTgwNzU4NjE3MDI@._V1_SY1000_SX800_AL_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMzEwMTU2MDY1MF5BMl5BanBnXkFtZTgwMDM4OTI2MDI@._V1_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMTYyMDk1Mjc1MF5BMl5BanBnXkFtZTgwNjE3NTM3MDI@._V1__SX1872_SY944_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMTY5ODU3MDUyMV5BMl5BanBnXkFtZTgwODg0NTE1MDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMTUyMzgxNjk5MV5BMl5BanBnXkFtZTgwNTI3MTg2MDI@._V1_SY1000_CR0,0,627,1000_AL_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMTA4NTY1NDU2MTFeQTJeQWpwZ15BbWU4MDMxMzA4NDAy._V1_SY1000_CR0,0,640,1000_AL_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMTA3MTMyNzc5NTReQTJeQWpwZ15BbWU4MDY3Mjc0NjAy._V1_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMjIwODYyMTg4MF5BMl5BanBnXkFtZTgwODU5Njc3MDI@._V1__SX1872_SY944_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMjE0OTczNzE4N15BMl5BanBnXkFtZTgwNTUxMDE2MDI@._V1_SY1000_CR0,0,707,1000_AL_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/MV5BMTg0NzkyMjE5NF5BMl5BanBnXkFtZTgwMDE5NTg3MDI@._V1__SX1872_SY944_.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="discoveryFlex">
+                            <img src="img/posters/suitsposter.jpg" />
+                            <div class="discoveryFill">
+                                <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-pg-name="libriary">
+                    <div class="discoveryTab" data-pg-name="libriary">
+                        <ul class="list-inline">
+                            <li>
+                                <button type="button" class="btn btn-default margin-top0 btn-sm bg-transparent no-shadow margin-bottom0 white">Series</button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-default margin-top0 btn-sm bg-transparent no-shadow margin-bottom0 white">Movies</button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-default margin-top0 btn-sm bg-transparent no-shadow margin-bottom0 white">Classes</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="static">
+                        <h4 class="margin-top45 white margin-bottom0">New Release</h4>
+                    </div>
+                    <div data-pg-name="discovery" class="rowScroll">
+                        <div class="flexRow clearfix pull-left">
+                            <div class="discoveryFlex">
+                                <img src="img/posters/3768c84033f1b05c4c17bfc8c74d4b2e.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/93768a0b766a5c8f2309e6c2811ef6b7.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/Arrow_TV_Series_Promo_Poster-3.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/images.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMjA3MjcwOTE0MF5BMl5BanBnXkFtZTgwNDI3MTc1MDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMjQxNDY3Njk4M15BMl5BanBnXkFtZTgwODEzOTg3MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTA1MTA4MjU5MjReQTJeQWpwZ15BbWU4MDg3Mjc0NjAy._V1_SY1000_CR0,0,735,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/suitsposter.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/Shadowhunters-2.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BOTY5MjQyNjU1NF5BMl5BanBnXkFtZTgwNzcyNzQ2MDI@._V1_SY1000_CR0,0,746,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BOTEzMjc3MDI3M15BMl5BanBnXkFtZTgwMDU0MDA4MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BODc1NTY5ODM3N15BMl5BanBnXkFtZTgwNzM4OTg3MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BODAwMzE0NzIxNV5BMl5BanBnXkFtZTgwMTkzNzk2MDI@._V1_SY1000_CR0,0,684,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BNzI1NjI5OTUyM15BMl5BanBnXkFtZTgwOTM4NzY2MDI@._V1_SY1000_CR0,0,657,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BNzA1NDU5MzIxOV5BMl5BanBnXkFtZTgwMjY4NTM3MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMzYzNDEyODIzN15BMl5BanBnXkFtZTgwNzU4NjE3MDI@._V1_SY1000_SX800_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMzEwMTU2MDY1MF5BMl5BanBnXkFtZTgwMDM4OTI2MDI@._V1_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTYyMDk1Mjc1MF5BMl5BanBnXkFtZTgwNjE3NTM3MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTY5ODU3MDUyMV5BMl5BanBnXkFtZTgwODg0NTE1MDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTUyMzgxNjk5MV5BMl5BanBnXkFtZTgwNTI3MTg2MDI@._V1_SY1000_CR0,0,627,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTA4NTY1NDU2MTFeQTJeQWpwZ15BbWU4MDMxMzA4NDAy._V1_SY1000_CR0,0,640,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTA3MTMyNzc5NTReQTJeQWpwZ15BbWU4MDY3Mjc0NjAy._V1_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMjIwODYyMTg4MF5BMl5BanBnXkFtZTgwODU5Njc3MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMjE0OTczNzE4N15BMl5BanBnXkFtZTgwNTUxMDE2MDI@._V1_SY1000_CR0,0,707,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTg0NzkyMjE5NF5BMl5BanBnXkFtZTgwMDE5NTg3MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/suitsposter.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="static">
+                        <h4 class="margin-top45 white margin-bottom0">Recommended</h4>
+                    </div>
+                    <div data-pg-name="discovery" class="rowScroll">
+                        <div class="flexRow clearfix pull-left">
+                            <div class="discoveryFlex">
+                                <img src="img/posters/3768c84033f1b05c4c17bfc8c74d4b2e.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/93768a0b766a5c8f2309e6c2811ef6b7.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/Arrow_TV_Series_Promo_Poster-3.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/images.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMjA3MjcwOTE0MF5BMl5BanBnXkFtZTgwNDI3MTc1MDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMjQxNDY3Njk4M15BMl5BanBnXkFtZTgwODEzOTg3MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTA1MTA4MjU5MjReQTJeQWpwZ15BbWU4MDg3Mjc0NjAy._V1_SY1000_CR0,0,735,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/suitsposter.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/Shadowhunters-2.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BOTY5MjQyNjU1NF5BMl5BanBnXkFtZTgwNzcyNzQ2MDI@._V1_SY1000_CR0,0,746,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BOTEzMjc3MDI3M15BMl5BanBnXkFtZTgwMDU0MDA4MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BODc1NTY5ODM3N15BMl5BanBnXkFtZTgwNzM4OTg3MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BODAwMzE0NzIxNV5BMl5BanBnXkFtZTgwMTkzNzk2MDI@._V1_SY1000_CR0,0,684,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BNzI1NjI5OTUyM15BMl5BanBnXkFtZTgwOTM4NzY2MDI@._V1_SY1000_CR0,0,657,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BNzA1NDU5MzIxOV5BMl5BanBnXkFtZTgwMjY4NTM3MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMzYzNDEyODIzN15BMl5BanBnXkFtZTgwNzU4NjE3MDI@._V1_SY1000_SX800_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMzEwMTU2MDY1MF5BMl5BanBnXkFtZTgwMDM4OTI2MDI@._V1_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTYyMDk1Mjc1MF5BMl5BanBnXkFtZTgwNjE3NTM3MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTY5ODU3MDUyMV5BMl5BanBnXkFtZTgwODg0NTE1MDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTUyMzgxNjk5MV5BMl5BanBnXkFtZTgwNTI3MTg2MDI@._V1_SY1000_CR0,0,627,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTA4NTY1NDU2MTFeQTJeQWpwZ15BbWU4MDMxMzA4NDAy._V1_SY1000_CR0,0,640,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTA3MTMyNzc5NTReQTJeQWpwZ15BbWU4MDY3Mjc0NjAy._V1_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMjIwODYyMTg4MF5BMl5BanBnXkFtZTgwODU5Njc3MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMjE0OTczNzE4N15BMl5BanBnXkFtZTgwNTUxMDE2MDI@._V1_SY1000_CR0,0,707,1000_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMTg0NzkyMjE5NF5BMl5BanBnXkFtZTgwMDE5NTg3MDI@._V1__SX1872_SY944_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/suitsposter.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="static">
+                        <h4 class="margin-top45 white margin-bottom0">Arrow</h4>
+                    </div>
+                    <div data-pg-name="discovery" class="rowScroll">
+                        <div class="flexRow clearfix pull-left">
+                            <div class="discoveryFlex">
+                                <img src="img/posters/Arrow_TV_Series_Promo_Poster-3.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="discoveryFlex">
+                                <img src="img/posters/MV5BMzYzNDEyODIzN15BMl5BanBnXkFtZTgwNzU4NjE3MDI@._V1_SY1000_SX800_AL_.jpg" />
+                                <div class="discoveryFill">
+                                    <a href="" class="discoveryFollow text-center"><p class="white"><b>Series Name</b></p><span class="fa-stack fa-3x"><i class="fa fa-circle fa-stack-2x sunflower"></i><i class="fa fa-stack-1x fa-inverse fa-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                                                                                more about user
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>         
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>         
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/bskit-scripts.js"></script>         
+        <script type="text/javascript" src="js/angular.js"></script>
+        <script type="text/javascript" src="js/core.js"></script>
+    </body>     
+</html>

@@ -1,23 +1,28 @@
 {
-  "name": "rain",
+  "name": "joy",
   "version": "1.0.0",
-  "main": "core.js",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "consolidate": "^0.14.5",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.21",
+    "nunjucks": "^3.0.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "resolvmon": "^0.2.4",
+    "shelljs": "^0.7.6",
+    "bcryptjs": "^0.7.12",
+    "q": "^1.0.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "ajax-request": "^1.2.1",
-    "fetchagent": "^1.0.0",
-    "mongodb": "^2.2.19",
-    "node-uncompress": "^0.1.8",
-    "omdb": "^0.7.0",
-    "p7zip": "^2.2.0",
-    "q-xhr": "^1.1.0",
-    "resolvmon": "^0.2.4",
-    "shelljs": "^0.7.5"
-  },
-  "devDependencies": {},
-  "description": ""
+  "license": "ISC"
 }

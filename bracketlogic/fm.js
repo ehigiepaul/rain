@@ -5,16 +5,15 @@ var sh = require('shelljs');
 var exec = require('child_process').exec;
 var reg = require('./regex');
 var mongodb = require('mongodb').MongoClient;
-var vf = ['.mkv', '.avi', '.mp4'];
+let vf = ['.mkv', '.avi', '.mp4'];
 var files = [];
 var directory = [];
 var d = '/Users/ballz/Downloads/';
 var cPath = "/Users/ballz/Desktop/";
 var compressed = ['.rar', '.zip'];
-var series = /(. * )(?:[^x](?:(\d {1})(\d {2}))[^p] | (?:s(\d + )e(\d + )))(. * )/igm;
-var movies = /(. * )[^x](\d {4})[^p](?:. * )/gim;
-var rf = /((?:^(ETRG)) | ((. * )?(sample))(. * ) | ((. * )?(subs)))(. * )/igm;
-
+var series = /(.*)(?:[^x](?:(\d{1})(\d{2}))[^p]|(?:s(\d+)e(\d+)))(.*)/igm;
+var movies = /(.*)[^x](\d{4})[^p](?:.*)/gim;
+var rf = /((?:^(ETRG))|((.*)?(sample))(.*)|((.*)?(subs)))(.*)/igm;
 // arrange file by moving the to thier folders
 var arrFile = function (file, moveLoc) {
     console.log(file);
@@ -25,33 +24,42 @@ var arrFile = function (file, moveLoc) {
     } else {
         sh.mkdir('-p', moveLoc);
         console.log('moving ----  ' + path.basename(file));
-        sh.mv(file, moveLoc);
+        sh.cp(file, moveLoc);
         console.log("moving " + path.basename(file) + " completed")
         arrFile(file, moveLoc);
     }
 }
 
 
-var com = [];
+var com = []
 var x = function (dir, newloc) {
     var list = fs.readdirSync(dir);
-    for (var i in list) {
+    for (i in list) {
         var stat = fs.statSync(path.join(dir, list[i])).isFile();
         if (stat) {
             if (compressed.indexOf(path.extname(list[i])) >= 0 && !rf.test(list[i])) {
-                console.log('extracting ' + list[i]);
+                console.log('extracting ' + list[i])
                 exec('unrar x -y ' + path.join(dir, list[i]) + " " + path.dirname(path.join(dir, list[i])));
                 console.log('extracting completed');
             }
         } else {
-            x(path.join(dir, list[i]), newloc);
+            x(path.join(dir, list[i]), newloc)
         }
     }
 }
 
 function movieCheck(dir, name, newLoc) {
-
-    files.push({// copy the movies to an array
+    mongodb.connect('mongodb://localhost:27017/joy', (err, db) => {
+        db.collection('movies').insert({
+            'name': reg(movies, name, "$1"),
+            'year': reg(movies, name, "$2"),
+            'path': path.join(newLoc, 'movies', reg(movies, name, "$2"), reg(movies, name, "$1").slice(0, 1)),
+            'fullPath': path.join(newLoc, 'movies', reg(movies, name, "$2"), reg(movies, name, "$1").slice(0, 1).toUpperCase(), name)
+        });
+        console.log('document stored');
+        // db.close();
+    });
+    files.push({ // copy the movies to an array
         'name': reg(movies, name, "$1"),
         'year': reg(movies, name, "$2"),
         'path': path.join(newLoc, 'movies', reg(movies, name, "$2"), reg(movies, name, "$1").slice(0, 1)),
@@ -64,16 +72,27 @@ function movieCheck(dir, name, newLoc) {
 }
 
 function seriesCheck(dir, name, newLoc) {
-    if (/^(?:s(\d + )e(\d + ))/igm.test(name)) {// check for series that starts with series info
-        n = path.basename(path.dirname(path.join(dir, name)));
-        Sname = reg(/(. * )(?:(season) | (s\d + ))(. * )/igm, n, "$1");
-        sN = Sname + " ";
+    if (/^(?:s(\d+)e(\d+))/igm.test(name)) { // check for series that starts with series info
+        var n = path.basename(path.dirname(path.join(dir, name)));
+        var Sname = reg(/(.*)(?:(season)|(s\d+))(.*)/igm, n, "$1");
+        var sN = Sname + " ";
     } else {
-        Sname = reg(series, name, '$1').trim();
-        sN = "";
-    }
+        var Sname = reg(series, name, '$1').trim();
+        var sN = "";
+    };
 
-    files.push({//copy all series in directory
+    mongodb.connect('mongodb://localhost:27017/joy', (err, db) => {
+        db.collection('series').insert({
+            'name': Sname,
+            'season': reg(series, name, '$4 $2').trim(),
+            'episode': reg(series, name, '$5 $3').trim(),
+            'path': path.join(newLoc, 'series', Sname, reg(series, name, '$4 $2').trim()),
+            'fullPath': path.join(newLoc, 'series', Sname, reg(series, name, '$4 $2').trim(), name)
+        });
+        console.log('document stored');
+        // db.close();
+    })
+    files.push({ //copy all series in directory
         'name': Sname,
         'season': reg(series, name, '$4 $2').trim(),
         'episode': reg(series, name, '$5 $3').trim(),
@@ -87,29 +106,26 @@ function seriesCheck(dir, name, newLoc) {
 }
 
 function readD(dir, newLoc) {
-
-    fs.readdir(dir, (err, list) => {//read the directory
+    fs.readdir(dir, (err, list) => { //read the directory
         x(path.join(dir), newLoc);
-
-        for (var i in list) {//loop the the file and directory in the path
+        for (var i in list) { //loop the the file and directory in the path
             var stat = fs.statSync(path.join(dir, list[i])).isFile(); // check if the item is a file  
 
-            if (stat && vf.indexOf(path.extname(list[i])) >= 0) {//check if file and has given extension
+            if (stat && vf.indexOf(path.extname(list[i])) >= 0) { //check if file and has given extension
 
-                if (rf.test(list[i])) {// if not movie check if the file contains the following expression
+                if (rf.test(list[i])) { // if not movie check if the file contains the following expression
                     console.log(list[i] + "\r removed");
                     fs.appendFileSync(path.join(newLoc, "removed Files.log"), list[i] + '\r')
-                } else if (movies.test(list[i]) && !rf.test(list[i])) {//get all movies in directory
+                } else if (movies.test(list[i]) && !rf.test(list[i])) { //get all movies in directory
                     movieCheck(dir, list[i], newLoc);
                 } else {
                     seriesCheck(dir, list[i], newLoc);
                 }
-            } else {// go through the folders found in the list
+            } else { // go through the folders found in the list
                 // directory.push(path.join(dir, list[i]));
                 readD(path.join(dir, list[i]), newLoc);
             }
         }
-
 
     });
 }
@@ -122,4 +138,4 @@ function readD(dir, newLoc) {
 // allRead(d, cPath)
 
 
-readD(d, cPath); 
+readD(d, cPath);
